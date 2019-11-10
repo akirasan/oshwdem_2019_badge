@@ -1,0 +1,218 @@
+EESchema Schematic File Version 4
+LIBS:robotac19-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LED:WS2812B D1
+U 1 1 5B3E4218
+P 4600 4200
+F 0 "D1" H 4750 3950 50  0000 L CNN
+F 1 "WS2812B" H 4200 3950 50  0000 L CNN
+F 2 "robotac19:LED_D5.0mm-4" H 4650 3900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4700 3825 50  0001 L TNN
+	1    4600 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:WS2812B D2
+U 1 1 5B3E4294
+P 4600 5050
+F 0 "D2" H 4350 5300 50  0000 L CNN
+F 1 "WS2812B" H 4650 5300 50  0000 L CNN
+F 2 "robotac19:LED_D5.0mm-4" H 4650 4750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4700 4675 50  0001 L TNN
+	1    4600 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5B3E70E8
+P 5800 5450
+F 0 "R1" V 5593 5450 50  0000 C CNN
+F 1 "R" V 5684 5450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5730 5450 50  0001 C CNN
+F 3 "~" H 5800 5450 50  0001 C CNN
+	1    5800 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_DPDT_x2 SW2
+U 1 1 5B3E7205
+P 4150 1500
+F 0 "SW2" H 4150 1735 50  0000 C CNN
+F 1 "SW_SPST" H 4150 1644 50  0000 C CNN
+F 2 "ripolabsimpleid:switch_slide" H 4150 1500 50  0001 C CNN
+F 3 "" H 4150 1500 50  0001 C CNN
+	1    4150 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5B3E7427
+P 4350 3350
+F 0 "#PWR03" H 4350 3100 50  0001 C CNN
+F 1 "GND" H 4355 3177 50  0000 C CNN
+F 2 "" H 4350 3350 50  0001 C CNN
+F 3 "" H 4350 3350 50  0001 C CNN
+	1    4350 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 1100 3950 1500
+Wire Wire Line
+	5150 4200 4900 4200
+Wire Wire Line
+	4300 4200 4200 4200
+Wire Wire Line
+	4200 4200 4200 5050
+Wire Wire Line
+	4200 5050 4300 5050
+NoConn ~ 4900 5050
+$Comp
+L power:GND #PWR01
+U 1 1 5B3E7E11
+P 3850 4550
+F 0 "#PWR01" H 3850 4300 50  0001 C CNN
+F 1 "GND" V 3855 4422 50  0000 R CNN
+F 2 "" H 3850 4550 50  0001 C CNN
+F 3 "" H 3850 4550 50  0001 C CNN
+	1    3850 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 3900 4600 3800
+Wire Wire Line
+	4600 3800 3850 3800
+Wire Wire Line
+	3850 3800 3850 4550
+Wire Wire Line
+	4600 5350 4600 5500
+Wire Wire Line
+	4600 5500 3850 5500
+Wire Wire Line
+	3850 5500 3850 4550
+Connection ~ 3850 4550
+Wire Wire Line
+	4600 4750 4600 4600
+Wire Wire Line
+	4600 4600 5100 4600
+Wire Wire Line
+	5100 4600 5100 5450
+Connection ~ 4600 4600
+Wire Wire Line
+	4600 4600 4600 4500
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5B62B32E
+P 3750 1100
+F 0 "BT1" V 3495 1150 50  0000 C CNN
+F 1 "Battery_Cell" V 3586 1150 50  0000 C CNN
+F 2 "ripolabsimpleid:BatteryHolder_Keystone_1058_1x2032" V 3750 1160 50  0001 C CNN
+F 3 "~" V 3750 1160 50  0001 C CNN
+	1    3750 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5B62B857
+P 3550 1250
+F 0 "#PWR0101" H 3550 1000 50  0001 C CNN
+F 1 "GND" H 3555 1077 50  0000 C CNN
+F 2 "" H 3550 1250 50  0001 C CNN
+F 3 "" H 3550 1250 50  0001 C CNN
+	1    3550 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 1250 3550 1100
+Wire Wire Line
+	3550 1100 3650 1100
+NoConn ~ 4350 1400
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5B3E65C9
+P 5300 5450
+F 0 "SW1" H 5300 5735 50  0000 C CNN
+F 1 "SW_Push" H 5300 5644 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H4.3mm" H 5300 5650 50  0001 C CNN
+F 3 "" H 5300 5650 50  0001 C CNN
+	1    5300 5450
+	1    0    0    -1  
+$EndComp
+Connection ~ 5100 5450
+Wire Wire Line
+	5100 5450 5100 5800
+Wire Wire Line
+	5100 5800 6900 5800
+Wire Wire Line
+	5500 5450 5550 5450
+Connection ~ 5550 5450
+Wire Wire Line
+	5550 5450 5650 5450
+$Comp
+L power:GND #PWR0102
+U 1 1 5B688276
+P 6050 5550
+F 0 "#PWR0102" H 6050 5300 50  0001 C CNN
+F 1 "GND" H 6055 5377 50  0000 C CNN
+F 2 "" H 6050 5550 50  0001 C CNN
+F 3 "" H 6050 5550 50  0001 C CNN
+	1    6050 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 5450 6050 5450
+$Comp
+L MCU_Microchip_ATtiny:ATtiny85-20PU U1
+U 1 1 5B3E6F60
+P 4350 2650
+F 0 "U1" H 4350 3267 50  0000 C CNN
+F 1 "ATTINY85-20PU" V 3800 2650 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 4100 3250 50  0001 L BNN
+F 3 "1.31 USD" H 4750 2700 50  0001 L BNN
+F 4 "ATTINY85-20PU" H 4700 2550 50  0001 L BNN "Field4"
+F 5 "Good" H 4850 2400 50  0001 L BNN "Field5"
+F 6 "ATtiny Series 20 MHz 8 KB Flash 512 B SRAM 8-Bit Microcontroller - DIP-8" H 4700 2450 50  0001 L BNN "Field6"
+F 7 "Microchip" H 5100 2400 50  0001 L BNN "Field7"
+F 8 "DIP-8 Microchip" H 4700 2800 50  0001 L BNN "Field8"
+	1    4350 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 3250 4350 3350
+Wire Wire Line
+	4350 1600 4350 1750
+Wire Wire Line
+	4350 1750 6900 1750
+Wire Wire Line
+	6900 1750 6900 5800
+Connection ~ 4350 1750
+Wire Wire Line
+	4350 1750 4350 2050
+Wire Wire Line
+	4950 2650 5550 2650
+Wire Wire Line
+	5550 2650 5550 5450
+Wire Wire Line
+	4950 2550 5150 2550
+Wire Wire Line
+	5150 2550 5150 4200
+Wire Wire Line
+	6050 5450 6050 5550
+NoConn ~ 4950 2350
+NoConn ~ 4950 2450
+NoConn ~ 4950 2750
+NoConn ~ 4950 2850
+$EndSCHEMATC
